@@ -56,26 +56,22 @@ tensorboard>=2.7.0
 PyYAML>=5.4.0
 ```
 ---
-## 数据集 / Datasets
+## Datasets
 本项目支持以下常用低光照图像增强数据集：
-### 1. LOL 数据集 (Low-Light)
-LOL 数据集包含真实场景下采集的低光照/正常光照图像对，是 LLIE 领域最常用的基准数据集之一。
+### 1. LOL Dataset
 - **来源**: [Retinex-Net (Wei et al., BMVC 2018)](https://daooshee.github.io/BMVC2018website/)
 - **训练集**: 485 对图像
 - **测试集**: 15 对图像
 - **图像分辨率**: 400×600
 - **下载地址**: [Google Drive](https://drive.google.com/file/d/157bjO1_cFoSJ2IaUNnEkBDsXUOXajUTa/view)
-### 2. VE-LOL 数据集
-VE-LOL (Visible and Enhanced Low-Light) 包含合成与真实两种子集，规模更大。
+### 2. VE-LOL Dataset
 - **来源**: [From Noise to Signal (Liu et al., IJCV 2021)](https://flyywh.github.io/IJCV2021LowLight_VELOL/)
 - **合成训练集**: 2,500 对图像
 - **真实测试集**: 100 张图像
-### 3. MIT-Adobe FiveK 数据集
-包含 5,000 张由专业摄影师精修的 RAW 图像，常用于曝光校正与图像增强研究。
+### 3. MIT-Adobe FiveK Dataset
 - **来源**: [MIT-Adobe FiveK (Bychkovsky et al., CVPR 2011)](https://data.csail.mit.edu/graphics/fivek/)
 - **图像数量**: 5,000 张（训练 4,500 / 测试 500）
-### 4. LSRW 数据集
-LSRW (Large-Scale Real-World) 是大规模真实低光照数据集，图像来自手机相机。
+### 4. LSRW Dataset
 - **来源**: [LSRW (Hai et al., ACM MM 2023)](https://github.com/JianghaiSCU/R2RNet)
 - **图像数量**: 5,650 对（训练 5,200 / 测试 450）
 ---
