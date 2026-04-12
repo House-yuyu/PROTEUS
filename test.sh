@@ -1,4 +1,4 @@
-CKPT_PATH=/data2/users/zhangxu/ISP/6_UIR/W_UIR/output/PROTEUS_dataChange/UIEB/20260401_214329_bs2/best_model_test.pth
+CKPT_PATH=/data2/users/zhangxu/ISP/6_UIR/W_UIR/output/PROTEUS/UIEB/202603021_bs2/best_model_test.pth
 
 CUDA_VISIBLE_DEVICES=0 python test.py \
   --dataset "UIEB" \
