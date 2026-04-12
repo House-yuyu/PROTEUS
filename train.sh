@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# ["UIEB", "LSUI", "UFO", "EUVP-s", "EUVP-d"]
-# EUVP 200; UIEB 4卡1000和1300epoch性能差别不大
-# EUVP-d 学习率得小点
-
 CUDA_VISIBLE_DEVICES=3,4,5,6 torchrun --nproc_per_node=4 train.py \
   --dataset UIEB \
   --epoch 1000 \
