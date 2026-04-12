@@ -1,7 +1,18 @@
-# LLIEmm
-# LLIEmm — Low-Light Image Enhancement
-LLIEmm is a PyTorch-based framework for low-light image enhancement (LLIE). It restores visibility, color fidelity, and perceptual quality in images captured under poor illumination conditions.
+<div align="center">
+
+# 🌊 From Degradation Guidance to Latent Purification: A Unified Network for Underwater Image Restoration
+
+[![Paper](https://img.shields.io/badge/Paper-arXiv-red)](https://arxiv.org/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-yellow.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-orange.svg)](https://pytorch.org/)
+
+</div>
+
 ---
+
+
+
 ## Table of Contents
 - [Environment](#environment)
 - [Datasets](#数据集--datasets)
@@ -9,36 +20,18 @@ LLIEmm is a PyTorch-based framework for low-light image enhancement (LLIE). It r
 - [Quick Start](#快速开始--quick-start)
 ---
 ## Environment
-### 系统要求
-| 组件 | 版本要求 |
-|------|---------|
-| 操作系统 | Ubuntu 18.04 / 20.04 / 22.04 (推荐), Windows 10/11 |
-| Python | ≥ 3.8 |
-| PyTorch | ≥ 1.10.0 |
-| torchvision | ≥ 0.11.0 |
-| CUDA | ≥ 11.1（GPU 训练推荐）|
-| cuDNN | ≥ 8.0 |
 ### 安装步骤
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/House-yuyu/LLIEmm.git
-   cd LLIEmm
+   git clone https://github.com/House-yuyu/PROTEUS.git
+   cd PROTEUS
    ```
 2. **创建虚拟环境（推荐）**
    ```bash
-   conda create -n lliemm python=3.9 -y
-   conda activate lliemm
+   conda create -n PROTEUS python=3.10 -y
+   conda activate PROTEUS
    ```
-3. **安装 PyTorch（根据 CUDA 版本选择）**
-   ```bash
-   # CUDA 11.3
-   pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
-   # CUDA 11.6
-   pip install torch==1.13.0+cu116 torchvision==0.14.0+cu116 --extra-index-url https://download.pytorch.org/whl/cu116
-   # CPU only
-   pip install torch torchvision
-   ```
-4. **安装其余依赖**
+3. **安装其余依赖**
    ```bash
    pip install -r requirements.txt
    ```
