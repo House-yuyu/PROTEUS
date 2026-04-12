@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from tqdm import tqdm
 from thop import profile, clever_format
 from PIL import Image
-from datetime import datetime  # 确保导入 datetime
+from datetime import datetime  
 
 from utils.dataset import get_loader
 from model import myModel
@@ -76,7 +76,7 @@ class Tester(object):
         return selected
 
     def testing(self):
-        #以此确定保存路径的父目录
+        
         ckpt_dir = "/".join(self.args.ckpt.split("/")[:-1])
 
         dummy = torch.randn(1, 3, 256, 256).cuda()
