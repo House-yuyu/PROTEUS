@@ -136,20 +136,15 @@ LLIEmm/
 ```
 ---
 ## Quick Start
-### 训练
+### train
 ```bash
 python train.py --config configs/lol.yaml --dataset LOL --data_root data/LOL
 ```
-### 测试
+### test
 ```bash
 python test.py --config configs/lol.yaml --checkpoint checkpoints/best_model.pth \
                --input data/LOL/test/low --output results/
 ```
-
-
-## Acknowledgements
-
----
 
 ## Contact
 
