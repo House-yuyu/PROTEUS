@@ -12,6 +12,17 @@
 ---
 
 
+This is the official PyTorch codes for the paper:
+
+>**From Degradation Guidance to Latent Purification: A Unified Network for Underwater Image Restoration**<br>  [Xu Zhang<sup>1</sup>](https://house-yuyu.github.io/), [Xuhui Cao<sup>1</sup>](), [Kangzhe Yuan<sup>1</sup>](), [Laibin Chang<sup>1</sup>](), [Huan Zhang<sup>2</sup>](), [Lefei Zhang<sup>1📧</sup>](https://scholar.google.com.hk/citations?user=BLKHwNwAAAAJ&hl=zh-CN)<br>
+> <sup>1</sup>Wuhan University, <sup>2</sup>Guangdong University of Technology<br>
+> <sup>📧</sup>Corresponding author.
+
+![teaser_img](fig/model.png)
+
+
+:star: If PROTEUS is helpful to your images or projects, please help star this repo. Thank you! :point_left:
+
 
 ## Table of Contents
 - [Environment](#environment)
@@ -134,31 +145,12 @@ python train.py --config configs/lol.yaml --dataset LOL --data_root data/LOL
 python test.py --config configs/lol.yaml --checkpoint checkpoints/best_model.pth \
                --input data/LOL/test/low --output results/
 ```
-### 评估指标
-本项目使用以下指标评估增强效果：
-| 指标 | 说明 |
-|------|------|
-| PSNR | 峰值信噪比（越高越好）|
-| SSIM | 结构相似性（越高越好）|
-| LPIPS | 感知图像相似度（越低越好）|
+
+
+## Acknowledgements
+
 ---
-## 引用 / Citation
-如果本项目对您的研究有帮助，请引用：
-```bibtex
-@article{lliemm2026,
-  title   = {LLIEmm: Low-Light Image Enhancement},
-  author  = {Xu Zhang},
-  journal = {arXiv preprint},
-  year    = {2026}
-}
-```
----
-## 致谢 / Acknowledgements
-感谢以下数据集和开源项目的贡献：
-- [LOL Dataset](https://daooshee.github.io/BMVC2018website/)
-- [VE-LOL Dataset](https://flyywh.github.io/IJCV2021LowLight_VELOL/)
-- [MIT-Adobe FiveK](https://data.csail.mit.edu/graphics/fivek/)
-- [LSRW Dataset](https://github.com/JianghaiSCU/R2RNet)
----
-## 联系方式 / Contact
-如有问题，请联系：**zhangx0802@whu.edu.cn**
+
+## Contact
+
+If you have any questions, please feel free to reach us out at <a href="zhangx0802@whu.edu.cn">zhangx0802@whu.edu.cn</a>.
