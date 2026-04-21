@@ -60,78 +60,105 @@ tensorboard>=2.7.0
 PyYAML>=5.4.0
 ```
 ---
+
+
 ## Datasets
-本项目支持以下常用低光照图像增强数据集：
-### 1. LOL Dataset
-- **来源**: [Retinex-Net (Wei et al., BMVC 2018)](https://daooshee.github.io/BMVC2018website/)
-- **训练集**: 485 对图像
-- **测试集**: 15 对图像
-- **图像分辨率**: 400×600
-- **下载地址**: [Google Drive](https://drive.google.com/file/d/157bjO1_cFoSJ2IaUNnEkBDsXUOXajUTa/view)
-### 2. VE-LOL Dataset
-- **来源**: [From Noise to Signal (Liu et al., IJCV 2021)](https://flyywh.github.io/IJCV2021LowLight_VELOL/)
-- **合成训练集**: 2,500 对图像
-- **真实测试集**: 100 张图像
-### 3. MIT-Adobe FiveK Dataset
-- **来源**: [MIT-Adobe FiveK (Bychkovsky et al., CVPR 2011)](https://data.csail.mit.edu/graphics/fivek/)
-- **图像数量**: 5,000 张（训练 4,500 / 测试 500）
-### 4. LSRW Dataset
-- **来源**: [LSRW (Hai et al., ACM MM 2023)](https://github.com/JianghaiSCU/R2RNet)
-- **图像数量**: 5,650 对（训练 5,200 / 测试 450）
+
+We conduct experiments on several standard benchmarks for underwater image restoration, which can be grouped into two categories:
+
+### 1) Paired datasets with synthetic references
+
+| Dataset | Source | Train | Val | Test |
+|---------|--------|-------|-----|------|
+| UIEB | [Li et al., TIP 2020](https://li-chongyi.github.io/proj_benchmark.html) | 800 | — | 90 (U90) |
+| LSUI | [Peng et al., TIP 2023](https://lintaopeng.github.io/) | 3,879 | — | 400 |
+| UFO | [Islam et al., RAL 2020](https://irvlab.cs.umn.edu/resources) | 1,200 | 300 | 120 |
+| EUVP-Scene | [Islam et al., RAL 2020](https://irvlab.cs.umn.edu/resources/euvp-dataset) | 1,748 | 218 | 218 |
+| EUVP-Dark | [Islam et al., RAL 2020](https://irvlab.cs.umn.edu/resources/euvp-dataset) | 4,440 | 555 | 555 |
+
+### 2) Non-referenced datasets (test only)
+
+| Dataset | No. of Images | Description |
+|---------|--------------|-------------|
+| Challenging-60 | 60 | Real-world subset of UIEB without ground-truth references |
+| U45 | 45 | Diverse collection of real underwater images |
+| UCCS | 300 | Underwater color cast scenes (blue, blue-green, green) |
+| EUVP-330 | 330 | Non-reference subset from EUVP |
+
+### Evaluation Metrics
+
+- **Reference-based**: PSNR, SSIM, LPIPS
+- **Non-reference**: UCIQE, UIQM, URanker
+
 ---
+
 ## Dataset Structure
-请将数据集下载后按如下目录结构组织：
+
+Please organize the downloaded datasets as follows:
+
 ```
-LLIEmm/
+PROTEUS/
 ├── data/
-│   ├── LOL/
+│   ├── UIEB/
 │   │   ├── train/
-│   │   │   ├── low/          # 低光照输入图像 (485 张)
-│   │   │   │   ├── 1.png
-│   │   │   │   ├── 2.png
-│   │   │   │   └── ...
-│   │   │   └── high/         # 对应正常光照参考图像 (485 张)
-│   │   │       ├── 1.png
-│   │   │       ├── 2.png
-│   │   │       └── ...
+│   │   │   ├── input/        # 800 degraded underwater images
+│   │   │   └── GT/           # 800 reference images
 │   │   └── test/
-│   │       ├── low/          # 低光照测试图像 (15 张)
-│   │       │   ├── 1.png
-│   │       │   └── ...
-│   │       └── high/         # 参考图像 (15 张)
-│   │           ├── 1.png
-│   │           └── ...
+│   │       ├── U90/          # 90 ref-based test images
+│   │       ├── Challenge-60/ # 60 non-ref test images
+│   │       └── GT/           # GT for U90 only
 │   │
-│   ├── VE-LOL/
+│   ├── LSUI/
 │   │   ├── train/
-│   │   │   ├── low/
-│   │   │   └── high/
+│   │   │   ├── input/        # 3,879 images
+│   │   │   └── GT/
 │   │   └── test/
-│   │       ├── low/
-│   │       └── high/
+│   │       ├── input/        # 400 images
+│   │       └── GT/
 │   │
-│   ├── FiveK/
+│   ├── UFO/
 │   │   ├── train/
-│   │   │   ├── input/        # 原始低曝光图像
-│   │   │   └── expert_C/     # Expert C 精修图像（常用参考）
+│   │   │   ├── input/        # 1,200 images
+│   │   │   └── GT/
+│   │   ├── val/
+│   │   │   ├── input/        # 300 images
+│   │   │   └── GT/
 │   │   └── test/
-│   │       ├── input/
-│   │       └── expert_C/
+│   │       ├── input/        # 120 images
+│   │       └── GT/
 │   │
-│   └── LSRW/
-│       ├── train/
-│       │   ├── low/
-│       │   └── high/
-│       └── test/
-│           ├── low/
-│           └── high/
+│   ├── EUVP-Scene/
+│   │   ├── train/
+│   │   │   ├── input/        # 1,748 images
+│   │   │   └── GT/
+│   │   ├── val/
+│   │   │   ├── input/        # 218 images
+│   │   │   └── GT/
+│   │   └── test/
+│   │       ├── input/        # 218 images
+│   │       └── GT/
+│   │
+│   ├── EUVP-Dark/
+│   │   ├── train/
+│   │   │   ├── input/        # 4,440 images
+│   │   │   └── GT/
+│   │   ├── val/
+│   │   │   ├── input/        # 555 images
+│   │   │   └── GT/
+│   │   └── test/
+│   │       ├── input/        # 555 images
+│   │       └── GT/
+│   │
+│   └── test_sets/
+│       ├── U45/              # 45 images (non-ref)
+│       ├── UCCS/             # 300 images (non-ref)
+│       └── EUVP-330/         # 330 images (non-ref)
 │
-├── models/                   # 模型定义
-├── utils/                    # 工具函数
-├── configs/                  # 配置文件
-├── train.py                  # 训练脚本
-├── test.py                   # 测试脚本
-├── requirements.txt          # Python 依赖
+├── Neg_dir/                  # Negative sample data directory
+├── utils/
+├── train.py
+├── test.py
+├── requirements.txt
 └── README.md
 ```
 ---
