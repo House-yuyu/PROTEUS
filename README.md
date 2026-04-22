@@ -25,28 +25,28 @@ This is the official PyTorch codes for the paper:
 
 
 ## Table of Contents
-- [Environment](#environment)
-- [Datasets](#数据集--datasets)
-- [Dataset Structure](#数据集目录结构--dataset-structure)
-- [Quick Start](#快速开始--quick-start)
+- [Environment](#Environment)
+- [Datasets](#Datasets)
+- [Dataset Structure](#Dataset Structure)
+- [Quick Start](#Quick Start)
 ---
 ## Environment
-### 安装步骤
-1. **克隆仓库**
+### **Installation Steps**
+1. **Clone the repository**
    ```bash
    git clone https://github.com/House-yuyu/PROTEUS.git
    cd PROTEUS
    ```
-2. **创建虚拟环境（推荐）**
+2. **Create a virtual environment**
    ```bash
    conda create -n PROTEUS python=3.10 -y
    conda activate PROTEUS
    ```
-3. **安装其余依赖**
+3. **Install the dependencies**
    ```bash
    pip install -r requirements.txt
    ```
-### 主要依赖库
+### Main Dependencies
 ```
 torch>=1.10.0
 torchvision>=0.11.0
