@@ -14,7 +14,7 @@
 
 This is the official PyTorch codes for the paper:
 
->**From Degradation Guidance to Latent Purification: A Unified Network for Underwater Image Restoration**<br>  [Xu Zhang<sup>1</sup>](https://house-yuyu.github.io/), Xuhui Cao<sup>1</sup>, Kangzhe Yuan<sup>1</sup>, [Laibin Chang<sup>1</sup>](), [Huan Zhang<sup>2</sup>](), [Lefei Zhang<sup>1📧</sup>](https://scholar.google.com.hk/citations?user=BLKHwNwAAAAJ&hl=zh-CN)<br>
+>**From Degradation Guidance to Latent Purification: A Unified Network for Underwater Image Restoration**<br>  [Xu Zhang<sup>1</sup>](https://house-yuyu.github.io/), Xuhui Cao<sup>1</sup>, Kangzhe Yuan<sup>1</sup>, [Laibin Chang<sup>1</sup>](https://scholar.google.com.hk/citations?user=1l8X8PgAAAAJ&hl=zh-CN), [Huan Zhang<sup>2</sup>](https://scholar.google.com.hk/citations?user=bJjd_kMAAAAJ&hl=zh-CN), [Lefei Zhang<sup>1📧</sup>](https://scholar.google.com.hk/citations?user=BLKHwNwAAAAJ&hl=zh-CN)<br>
 > <sup>1</sup>Wuhan University, <sup>2</sup>Guangdong University of Technology<br>
 > <sup>📧</sup>Corresponding author.
 
