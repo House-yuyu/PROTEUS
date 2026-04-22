@@ -64,6 +64,11 @@ PyYAML>=5.4.0
 
 ## Datasets
 
+The Datasets are hosted on Baidu Netdisk (百度网盘):
+
+-  [Link / 链接](https://pan.baidu.com/s/1qaMhFXSfK3iSk1E9M8qYOA)  
+- **Extraction code / 提取码**: `1222`
+
 We conduct experiments on several standard benchmarks for underwater image restoration, which can be grouped into two categories:
 
 ### 1) Paired datasets with synthetic references
