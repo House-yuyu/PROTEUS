@@ -27,8 +27,8 @@ This is the official PyTorch codes for the paper:
 ## Table of Contents
 - [Environment](#Environment)
 - [Datasets](#Datasets)
-- [Dataset Structure](#Dataset Structure)
-- [Quick Start](#Quick Start)
+- [Dataset Structure](#Dataset-Structure)
+- [Quick Start](#Quick-Start)
 ---
 ## Environment
 ### **Installation Steps**
@@ -92,7 +92,7 @@ We conduct experiments on several standard benchmarks for underwater image resto
 
 ---
 
-## Dataset Structure
+## Dataset-Structure
 
 Please organize the downloaded datasets as follows:
 
@@ -162,15 +162,14 @@ PROTEUS/
 └── README.md
 ```
 ---
-## Quick Start
+## Quick-Start
 ### train
 ```bash
-python train.py --config configs/lol.yaml --dataset LOL --data_root data/LOL
+./train.sh
 ```
 ### test
 ```bash
-python test.py --config configs/lol.yaml --checkpoint checkpoints/best_model.pth \
-               --input data/LOL/test/low --output results/
+./test.sh
 ```
 
 ## Contact
