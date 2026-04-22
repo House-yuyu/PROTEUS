@@ -70,7 +70,7 @@ We conduct experiments on several standard benchmarks for underwater image resto
 
 | Dataset | Source | Train | Val | Test |
 |---------|--------|-------|-----|------|
-| UIEB | [Li et al., TIP 2020](https://li-chongyi.github.io/proj_benchmark.html) | 800 | — | 90 (U90) |
+| UIEB | [Li et al., TIP 2020](https://li-chongyi.github.io/proj_benchmark.html) | 800 | — | 90 |
 | LSUI | [Peng et al., TIP 2023](https://lintaopeng.github.io/) | 3,879 | — | 400 |
 | UFO | [Islam et al., RAL 2020](https://irvlab.cs.umn.edu/resources) | 1,200 | 300 | 120 |
 | EUVP-Scene | [Islam et al., RAL 2020](https://irvlab.cs.umn.edu/resources/euvp-dataset) | 1,748 | 218 | 218 |
