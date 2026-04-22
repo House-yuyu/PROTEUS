@@ -46,19 +46,6 @@ This is the official PyTorch codes for the paper:
    ```bash
    pip install -r requirements.txt
    ```
-### Main Dependencies
-```
-torch>=1.10.0
-torchvision>=0.11.0
-numpy>=1.21.0
-opencv-python>=4.5.0
-Pillow>=8.0.0
-scikit-image>=0.18.0
-matplotlib>=3.4.0
-tqdm>=4.62.0
-tensorboard>=2.7.0
-PyYAML>=5.4.0
-```
 ---
 
 
