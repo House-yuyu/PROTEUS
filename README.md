@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌊 From Degradation Guidance to Latent Purification: A Unified Network for Underwater Image Restoration
+# 🌊 Degradation-Guided Underwater Image Restoration with Task-Oriented Latent Control
 
 ![Paper](https://img.shields.io/badge/Paper-Coming%20Soon-red)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
