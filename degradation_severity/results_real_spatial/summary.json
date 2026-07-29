@@ -1,0 +1,390 @@
+{
+  "protocol": {
+    "seed": 2026,
+    "size": 256,
+    "grid_size": 8,
+    "score": "RMS magnitude of 8x8 block-mean CIELAB input-reference residuals after subtracting the image-wide residual",
+    "stratification": "stable rank split into balanced within-dataset tertiles; labels indicate relative spatial non-uniformity, not absolute physical degradation severity",
+    "uses_model_outputs_for_stratification": false,
+    "methods": {
+      "Input": "unprocessed benchmark input",
+      "WWE-UIE": "dataset-matched checkpoint used in the main paper",
+      "Uniform guide": "same PROTEUS checkpoint; each GDFMB guide replaced by its per-channel spatial mean at inference",
+      "PROTEUS": "unmodified dataset-matched checkpoint"
+    }
+  },
+  "strata": {
+    "U90": {
+      "Mild": {
+        "count": 30,
+        "score_min": 2.571350336074829,
+        "score_median": 5.684797286987305,
+        "score_max": 7.190238952636719
+      },
+      "Moderate": {
+        "count": 30,
+        "score_min": 7.194845199584961,
+        "score_median": 8.969379425048828,
+        "score_max": 10.825565338134766
+      },
+      "Severe": {
+        "count": 30,
+        "score_min": 10.899805068969727,
+        "score_median": 13.172166347503662,
+        "score_max": 18.77821159362793
+      }
+    },
+    "LSUI": {
+      "Mild": {
+        "count": 134,
+        "score_min": 1.6127231121063232,
+        "score_median": 4.707043886184692,
+        "score_max": 5.9804911613464355
+      },
+      "Moderate": {
+        "count": 133,
+        "score_min": 5.983578681945801,
+        "score_median": 6.8684515953063965,
+        "score_max": 7.964229583740234
+      },
+      "Severe": {
+        "count": 133,
+        "score_min": 7.991580486297607,
+        "score_median": 9.679265022277832,
+        "score_max": 17.95114517211914
+      }
+    }
+  },
+  "representatives": {
+    "LSUI": {
+      "Mild": {
+        "dataset": "LSUI",
+        "filename": "3058.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3058.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3058.jpg",
+        "spatial_score": 4.715971946716309,
+        "global_cast_score": 17.552413940429688,
+        "mean_delta_e": 18.491119384765625,
+        "severity": "Mild"
+      },
+      "Moderate": {
+        "dataset": "LSUI",
+        "filename": "3998.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3998.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3998.jpg",
+        "spatial_score": 6.8684515953063965,
+        "global_cast_score": 16.146953582763672,
+        "mean_delta_e": 16.880077362060547,
+        "severity": "Moderate"
+      },
+      "Severe": {
+        "dataset": "LSUI",
+        "filename": "3090.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3090.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3090.jpg",
+        "spatial_score": 9.679265022277832,
+        "global_cast_score": 17.22886848449707,
+        "mean_delta_e": 17.761539459228516,
+        "severity": "Severe"
+      }
+    },
+    "U90": {
+      "Mild": {
+        "dataset": "U90",
+        "filename": "11052.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/11052.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/11052.png",
+        "spatial_score": 5.640902042388916,
+        "global_cast_score": 14.572860717773438,
+        "mean_delta_e": 16.418907165527344,
+        "severity": "Mild"
+      },
+      "Moderate": {
+        "dataset": "U90",
+        "filename": "15094.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/15094.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/15094.png",
+        "spatial_score": 8.99006175994873,
+        "global_cast_score": 16.97612953186035,
+        "mean_delta_e": 20.32588768005371,
+        "severity": "Moderate"
+      },
+      "Severe": {
+        "dataset": "U90",
+        "filename": "1660.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/1660.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/1660.png",
+        "spatial_score": 13.113521575927734,
+        "global_cast_score": 31.10767936706543,
+        "mean_delta_e": 32.56070327758789,
+        "severity": "Severe"
+      }
+    }
+  },
+  "results": {
+    "U90": {
+      "Mild": {
+        "Input": {
+          "count": 30,
+          "psnr_mean": 18.28209753036499,
+          "ssim_mean": 0.7859389086564382
+        },
+        "WWE-UIE": {
+          "count": 30,
+          "psnr_mean": 24.65935052235921,
+          "ssim_mean": 0.9313411851723988
+        },
+        "Uniform guide": {
+          "count": 30,
+          "psnr_mean": 24.45404472351074,
+          "ssim_mean": 0.9205958942572275
+        },
+        "PROTEUS": {
+          "count": 30,
+          "psnr_mean": 24.72475242614746,
+          "ssim_mean": 0.9322594940662384
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 0.0654019037882487,
+          "paired_bootstrap_95_ci": [
+            -1.335153694152832,
+            1.58742568651835
+          ],
+          "positive_images": 10,
+          "count": 30
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 0.27070770263671873,
+          "paired_bootstrap_95_ci": [
+            -0.37093435287475585,
+            1.0045823701222736
+          ],
+          "positive_images": 13,
+          "count": 30
+        }
+      },
+      "Moderate": {
+        "Input": {
+          "count": 30,
+          "psnr_mean": 16.064949703216552,
+          "ssim_mean": 0.7623943984508514
+        },
+        "WWE-UIE": {
+          "count": 30,
+          "psnr_mean": 24.782977708180745,
+          "ssim_mean": 0.9356308380762736
+        },
+        "Uniform guide": {
+          "count": 30,
+          "psnr_mean": 25.34514675140381,
+          "ssim_mean": 0.9381022115548452
+        },
+        "PROTEUS": {
+          "count": 30,
+          "psnr_mean": 25.738088353474936,
+          "ssim_mean": 0.9398382862408956
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 0.9551106452941894,
+          "paired_bootstrap_95_ci": [
+            -0.6956441672643026,
+            2.5496901615460703
+          ],
+          "positive_images": 18,
+          "count": 30
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 0.39294160207112633,
+          "paired_bootstrap_95_ci": [
+            -0.1088585583368937,
+            0.9298763704299927
+          ],
+          "positive_images": 16,
+          "count": 30
+        }
+      },
+      "Severe": {
+        "Input": {
+          "count": 30,
+          "psnr_mean": 14.404218482971192,
+          "ssim_mean": 0.6601994762818019
+        },
+        "WWE-UIE": {
+          "count": 30,
+          "psnr_mean": 23.070529747009278,
+          "ssim_mean": 0.9094813287258148
+        },
+        "Uniform guide": {
+          "count": 30,
+          "psnr_mean": 25.205511411031086,
+          "ssim_mean": 0.9287302374839783
+        },
+        "PROTEUS": {
+          "count": 30,
+          "psnr_mean": 26.045969454447427,
+          "ssim_mean": 0.9320780396461487
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 2.975439707438151,
+          "paired_bootstrap_95_ci": [
+            1.2425761127471924,
+            4.72342638492584
+          ],
+          "positive_images": 20,
+          "count": 30
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 0.8404580434163411,
+          "paired_bootstrap_95_ci": [
+            0.16747488975524902,
+            1.5331318855285645
+          ],
+          "positive_images": 18,
+          "count": 30
+        }
+      },
+      "trend": {
+        "comparison": "PROTEUS minus Uniform guide",
+        "standardized_score_slope_db": 0.20270426416589976,
+        "paired_bootstrap_95_ci": [
+          -0.18403063688873103,
+          0.5949243042606506
+        ],
+        "spearman_rho": 0.18134749145985102,
+        "spearman_pvalue": 0.08715884905278176
+      }
+    },
+    "LSUI": {
+      "Mild": {
+        "Input": {
+          "count": 134,
+          "psnr_mean": 19.34980654360643,
+          "ssim_mean": 0.831478594844021
+        },
+        "WWE-UIE": {
+          "count": 134,
+          "psnr_mean": 28.659185110633054,
+          "ssim_mean": 0.9235437196582111
+        },
+        "Uniform guide": {
+          "count": 134,
+          "psnr_mean": 26.600353326370467,
+          "ssim_mean": 0.9039978135877581
+        },
+        "PROTEUS": {
+          "count": 134,
+          "psnr_mean": 29.055417359764895,
+          "ssim_mean": 0.9246511370388429
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 0.39623224913184324,
+          "paired_bootstrap_95_ci": [
+            0.02592899123234536,
+            0.7656490809881865
+          ],
+          "positive_images": 81,
+          "count": 134
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 2.455064033394429,
+          "paired_bootstrap_95_ci": [
+            1.9406361654623232,
+            3.002379775403151
+          ],
+          "positive_images": 106,
+          "count": 134
+        }
+      },
+      "Moderate": {
+        "Input": {
+          "count": 133,
+          "psnr_mean": 19.65564101082938,
+          "ssim_mean": 0.8384952666167926
+        },
+        "WWE-UIE": {
+          "count": 133,
+          "psnr_mean": 29.239304248551676,
+          "ssim_mean": 0.9266813711116189
+        },
+        "Uniform guide": {
+          "count": 133,
+          "psnr_mean": 27.39589938543793,
+          "ssim_mean": 0.9111215664928121
+        },
+        "PROTEUS": {
+          "count": 133,
+          "psnr_mean": 29.668146778766374,
+          "ssim_mean": 0.9281892498633019
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 0.42884253021469687,
+          "paired_bootstrap_95_ci": [
+            0.05523876211696998,
+            0.7967573793310868
+          ],
+          "positive_images": 74,
+          "count": 133
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 2.2722473933284446,
+          "paired_bootstrap_95_ci": [
+            1.8481218768241712,
+            2.7258780061750483
+          ],
+          "positive_images": 110,
+          "count": 133
+        }
+      },
+      "Severe": {
+        "Input": {
+          "count": 133,
+          "psnr_mean": 16.11668182315683,
+          "ssim_mean": 0.725515175582771
+        },
+        "WWE-UIE": {
+          "count": 133,
+          "psnr_mean": 27.97513312863228,
+          "ssim_mean": 0.9124261826500857
+        },
+        "Uniform guide": {
+          "count": 133,
+          "psnr_mean": 27.195166616511525,
+          "ssim_mean": 0.9012875707077801
+        },
+        "PROTEUS": {
+          "count": 133,
+          "psnr_mean": 28.27389724989583,
+          "ssim_mean": 0.9104941234104615
+        },
+        "PROTEUS_minus_WWE-UIE": {
+          "psnr_mean_difference": 0.29876412126354707,
+          "paired_bootstrap_95_ci": [
+            -0.19129488521948793,
+            0.7766874784813786
+          ],
+          "positive_images": 73,
+          "count": 133
+        },
+        "PROTEUS_minus_Uniform guide": {
+          "psnr_mean_difference": 1.078730633384303,
+          "paired_bootstrap_95_ci": [
+            0.5809781490411974,
+            1.5890045488687385
+          ],
+          "positive_images": 83,
+          "count": 133
+        }
+      },
+      "trend": {
+        "comparison": "PROTEUS minus Uniform guide",
+        "standardized_score_slope_db": -0.6508364991743675,
+        "paired_bootstrap_95_ci": [
+          -0.8864041859233911,
+          -0.42652705966617166
+        ],
+        "spearman_rho": -0.2293285583034894,
+        "spearman_pvalue": 3.58456868468575e-06
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Mild": {
+    "dataset": "U90",
+    "filename": "11052.png",
+    "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/11052.png",
+    "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/11052.png",
+    "spatial_score": 5.640902042388916,
+    "global_cast_score": 14.572860717773438,
+    "mean_delta_e": 16.418907165527344,
+    "severity": "Mild"
+  },
+  "Moderate": {
+    "dataset": "U90",
+    "filename": "15094.png",
+    "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/15094.png",
+    "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/15094.png",
+    "spatial_score": 8.99006175994873,
+    "global_cast_score": 16.97612953186035,
+    "mean_delta_e": 20.32588768005371,
+    "severity": "Moderate"
+  },
+  "Severe": {
+    "dataset": "U90",
+    "filename": "1660.png",
+    "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/1660.png",
+    "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/1660.png",
+    "spatial_score": 13.113521575927734,
+    "global_cast_score": 31.10767936706543,
+    "mean_delta_e": 32.56070327758789,
+    "severity": "Severe"
+  }
+}

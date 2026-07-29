@@ -1,0 +1,124 @@
+{
+  "protocol": {
+    "seed": 2026,
+    "size": 256,
+    "grid_size": 8,
+    "score": "RMS magnitude of 8x8 block-mean CIELAB input-reference residuals after subtracting the image-wide residual",
+    "stratification": "stable rank split into balanced within-dataset tertiles; labels indicate relative spatial non-uniformity, not absolute physical degradation severity",
+    "uses_model_outputs_for_stratification": false,
+    "methods": {
+      "Input": "unprocessed benchmark input",
+      "WWE-UIE": "dataset-matched checkpoint used in the main paper",
+      "Uniform guide": "same PROTEUS checkpoint; each GDFMB guide replaced by its per-channel spatial mean at inference",
+      "PROTEUS": "unmodified dataset-matched checkpoint"
+    }
+  },
+  "strata": {
+    "U90": {
+      "Mild": {
+        "count": 30,
+        "score_min": 2.571350336074829,
+        "score_median": 5.684797286987305,
+        "score_max": 7.190238952636719
+      },
+      "Moderate": {
+        "count": 30,
+        "score_min": 7.194845199584961,
+        "score_median": 8.969379425048828,
+        "score_max": 10.825565338134766
+      },
+      "Severe": {
+        "count": 30,
+        "score_min": 10.899805068969727,
+        "score_median": 13.172166347503662,
+        "score_max": 18.77821159362793
+      }
+    },
+    "LSUI": {
+      "Mild": {
+        "count": 134,
+        "score_min": 1.6127231121063232,
+        "score_median": 4.707043886184692,
+        "score_max": 5.9804911613464355
+      },
+      "Moderate": {
+        "count": 133,
+        "score_min": 5.983578681945801,
+        "score_median": 6.8684515953063965,
+        "score_max": 7.964229583740234
+      },
+      "Severe": {
+        "count": 133,
+        "score_min": 7.991580486297607,
+        "score_median": 9.679265022277832,
+        "score_max": 17.95114517211914
+      }
+    }
+  },
+  "representatives": {
+    "LSUI": {
+      "Mild": {
+        "dataset": "LSUI",
+        "filename": "3058.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3058.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3058.jpg",
+        "spatial_score": 4.715971946716309,
+        "global_cast_score": 17.552413940429688,
+        "mean_delta_e": 18.491119384765625,
+        "severity": "Mild"
+      },
+      "Moderate": {
+        "dataset": "LSUI",
+        "filename": "3998.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3998.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3998.jpg",
+        "spatial_score": 6.8684515953063965,
+        "global_cast_score": 16.146953582763672,
+        "mean_delta_e": 16.880077362060547,
+        "severity": "Moderate"
+      },
+      "Severe": {
+        "dataset": "LSUI",
+        "filename": "3090.jpg",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/input/3090.jpg",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/LSUI/test/GT/3090.jpg",
+        "spatial_score": 9.679265022277832,
+        "global_cast_score": 17.22886848449707,
+        "mean_delta_e": 17.761539459228516,
+        "severity": "Severe"
+      }
+    },
+    "U90": {
+      "Mild": {
+        "dataset": "U90",
+        "filename": "11052.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/11052.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/11052.png",
+        "spatial_score": 5.640902042388916,
+        "global_cast_score": 14.572860717773438,
+        "mean_delta_e": 16.418907165527344,
+        "severity": "Mild"
+      },
+      "Moderate": {
+        "dataset": "U90",
+        "filename": "15094.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/15094.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/15094.png",
+        "spatial_score": 8.99006175994873,
+        "global_cast_score": 16.97612953186035,
+        "mean_delta_e": 20.32588768005371,
+        "severity": "Moderate"
+      },
+      "Severe": {
+        "dataset": "U90",
+        "filename": "1660.png",
+        "input_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/input/1660.png",
+        "gt_path": "/data2/users/zhangxu/ISP/6_UIR/Datasets/U90/GT/1660.png",
+        "spatial_score": 13.113521575927734,
+        "global_cast_score": 31.10767936706543,
+        "mean_delta_e": 32.56070327758789,
+        "severity": "Severe"
+      }
+    }
+  }
+}
