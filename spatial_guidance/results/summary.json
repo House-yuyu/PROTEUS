@@ -1,0 +1,156 @@
+{
+  "protocol": {
+    "seed": 2026,
+    "size": 256,
+    "bootstrap_samples": 10000,
+    "cross_image_mapping": "next filename in deterministic sorted dataset order with circular wraparound",
+    "interventions": {
+      "Zero guide": "all-zero image supplied to every GDFMB",
+      "Uniform guide": "per-channel spatial mean of the normal full guide, broadcast to image size",
+      "Raw-input guide": "original underwater input supplied as guide while the main path retains the normal GEPM blend",
+      "Cross-image guide": "normal full guide computed from another test image",
+      "Full spatial guide": "unmodified checkpoint forward pass"
+    },
+    "note": "All settings use the same dataset-matched checkpoint. These are inference interventions, not retrained component ablations."
+  },
+  "datasets": {
+    "U90": {
+      "checkpoint": "/data2/users/zhangxu/ISP/6_UIR/W_UIR/output/PROTEUS/UIEB/20260412_144702_bs2/PSNR_25.5023_epoch_756.pth",
+      "count": 90
+    },
+    "LSUI": {
+      "checkpoint": "/data2/users/zhangxu/ISP/6_UIR/W_UIR/output/PROTEUS/LSUI/20260413_014400_bs2/PSNR_28.9994_epoch_194.pth",
+      "count": 400
+    }
+  },
+  "results": {
+    "U90": {
+      "Zero guide": {
+        "count": 90,
+        "psnr_mean": 22.063588905334473,
+        "ssim_mean": 0.8895119773017035,
+        "lpips_mean": 0.1342058209495412,
+        "full_minus_setting_psnr": {
+          "mean": 3.4391566382514105,
+          "paired_bootstrap_95_ci": [
+            2.440203533967336,
+            4.429708690113491
+          ],
+          "positive_images": 71
+        }
+      },
+      "Uniform guide": {
+        "count": 90,
+        "psnr_mean": 24.577812427944608,
+        "ssim_mean": 0.9269639790058136,
+        "lpips_mean": 0.08638058590392271,
+        "full_minus_setting_psnr": {
+          "mean": 0.924933115641276,
+          "paired_bootstrap_95_ci": [
+            0.4253412167231242,
+            1.4502498918109468
+          ],
+          "positive_images": 65
+        }
+      },
+      "Raw-input guide": {
+        "count": 90,
+        "psnr_mean": 25.467191865709093,
+        "ssim_mean": 0.9357849604553646,
+        "lpips_mean": 0.07958395429369476,
+        "full_minus_setting_psnr": {
+          "mean": 0.03555367787679036,
+          "paired_bootstrap_95_ci": [
+            -0.07567967149946424,
+            0.14478757911258266
+          ],
+          "positive_images": 54
+        }
+      },
+      "Cross-image guide": {
+        "count": 90,
+        "psnr_mean": 23.761736488342287,
+        "ssim_mean": 0.9177188860045539,
+        "lpips_mean": 0.10312718672470914,
+        "full_minus_setting_psnr": {
+          "mean": 1.7410090552435982,
+          "paired_bootstrap_95_ci": [
+            1.0627090003755357,
+            2.458915366066827
+          ],
+          "positive_images": 62
+        }
+      },
+      "Full spatial guide": {
+        "count": 90,
+        "psnr_mean": 25.502745543585885,
+        "ssim_mean": 0.9347309980127546,
+        "lpips_mean": 0.08047729664378696
+      }
+    },
+    "LSUI": {
+      "Zero guide": {
+        "count": 400,
+        "psnr_mean": 24.696072285175322,
+        "ssim_mean": 0.8889748781174421,
+        "lpips_mean": 0.1518275574594736,
+        "full_minus_setting_psnr": {
+          "mean": 4.303391759395599,
+          "paired_bootstrap_95_ci": [
+            3.931218862771988,
+            4.6867947412729265
+          ],
+          "positive_images": 364
+        }
+      },
+      "Uniform guide": {
+        "count": 400,
+        "psnr_mean": 24.489229311943053,
+        "ssim_mean": 0.8810133785754443,
+        "lpips_mean": 0.16064059453783558,
+        "full_minus_setting_psnr": {
+          "mean": 4.510234732627868,
+          "paired_bootstrap_95_ci": [
+            4.086394102931022,
+            4.927556443631649
+          ],
+          "positive_images": 331
+        }
+      },
+      "Raw-input guide": {
+        "count": 400,
+        "psnr_mean": 28.852299411296844,
+        "ssim_mean": 0.9210499741882086,
+        "lpips_mean": 0.08449256349587814,
+        "full_minus_setting_psnr": {
+          "mean": 0.14716463327407836,
+          "paired_bootstrap_95_ci": [
+            0.09490566688776016,
+            0.20186321955919265
+          ],
+          "positive_images": 236
+        }
+      },
+      "Cross-image guide": {
+        "count": 400,
+        "psnr_mean": 27.583981413841247,
+        "ssim_mean": 0.9111662360280752,
+        "lpips_mean": 0.09938998122233897,
+        "full_minus_setting_psnr": {
+          "mean": 1.4154826307296753,
+          "paired_bootstrap_95_ci": [
+            1.1175034295320512,
+            1.7312259030342103
+          ],
+          "positive_images": 296
+        }
+      },
+      "Full spatial guide": {
+        "count": 400,
+        "psnr_mean": 28.999464044570924,
+        "ssim_mean": 0.9211183044314385,
+        "lpips_mean": 0.08256327990442515
+      }
+    }
+  }
+}
